@@ -583,3 +583,27 @@ if has("gui_running")
     endfunction
     command! -bang -nargs=0 ScreenRecordMode call ScreenRecordMode()
 endif
+
+
+
+
+
+
+
+"" Repeat-commands 
+"" 
+"" Repeat last command and put cursor at start of change 
+""nnoremap . .`[ 
+"" Repeat last command-line change with Meta-. 
+""nnoremap <Esc>. @: 
+"" Move to beginning / end of last change 
+""noremap <Esc>h `[ 
+""noremap <Esc>l `] 
+"" (To select last-inserted text: enter visual mode, then Meta-H) 
+"" Move up/down one line and repeat last command 
+""nnoremap <Esc>j j.`[ 
+""nnoremap <Esc>k k.`[ 
+"" Move up/down one line and repeat last command-line change 
+""nnoremap <Esc>J j@: 
+""nnoremap <Esc>K k@: 
+

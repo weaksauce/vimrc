@@ -1,5 +1,5 @@
 #!/bin/sh
-INSTALL_TO=~/Projects
+INSTALL_TO=~/projects
 
 warn() {
     echo "$1" >&2
@@ -10,6 +10,7 @@ die() {
     exit 1
 }
 
+[ -e "$INSTALL_TO" ] || die "$INSTALL_TO doesn't exist"
 [ -e "$INSTALL_TO/vimrc" ] && die "$INSTALL_TO/vimrc already exists."
 [ -e "~/.vim" ] && die "~/.vim already exists."
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
